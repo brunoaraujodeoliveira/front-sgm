@@ -2,7 +2,7 @@
   "name": "gestao-municipal-angular",
   "version": "0.0.1",
   "scripts": {
-    "ng": "ng",
+    "ng": "node server.js",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
