@@ -8,5 +8,5 @@ ARG env=prod
 RUN npm run build
 
 FROM nginx:1.13
-COPY --from=node /app/dist/sgm /usr/share/nginx/html
+COPY --from=node /app/dist/gestao-municipal-angular /usr/share/nginx/html
 COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
