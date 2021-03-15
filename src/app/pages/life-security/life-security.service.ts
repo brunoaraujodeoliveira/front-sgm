@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class LifeSecurityService {
 
-  private baseUrl = 'http://localhost:8080/api/integracao/sincronismo';
+  private baseUrl = 'https://tcc-gateway.herokuapp.com/api/integracao/sincronismo';
 
   constructor(private http: HttpClient) { }
 
