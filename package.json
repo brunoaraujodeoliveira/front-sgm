@@ -7,14 +7,17 @@
   "scripts": {
     "ng": "node server.js",
     "start": "ng serve",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install npm i @angular/cli && npm start",
-    "postinstall": "ng build --prod"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "postinstall": "ng build -aot --prod"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^10.2.2",
+    "@angular/compiler-cli": "10.2.4",
     "@angular/animations": "10.2.4",
     "@angular/common": "10.2.4",
     "@angular/compiler": "10.2.4",
@@ -34,7 +37,8 @@
     "ngx-toastr": "13.0.0",
     "nouislider": "14.6.2",
     "rxjs": "6.6.6",
-    "zone.js": "0.10.3"
+    "zone.js": "0.10.3",
+    "typescript": "4.0.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.1002.2",
