@@ -6,9 +6,10 @@
   },
   "scripts": {
     "ng": "node server.js",
+    "start": "ng serve",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod ng serve"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
