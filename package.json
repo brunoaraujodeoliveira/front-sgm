@@ -5,7 +5,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "ng": "node server.js",
+    "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
     "lint": "ng lint",
