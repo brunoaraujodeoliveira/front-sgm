@@ -1,6 +1,9 @@
 {
   "name": "gestao-municipal-angular",
   "version": "0.0.1",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "ng": "node server.js",
     "start": "ng serve",
