@@ -7,12 +7,10 @@
   "scripts": {
     "ng": "node server.js",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "postinstall": "ng build -aot --prod"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
