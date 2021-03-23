@@ -1,22 +1,16 @@
-function requireHTTPS(req, res, next) {
-    // The 'x-forwarded-proto' check is for Heroku
-    if (!req.secure && req.get('x-forwarded-proto') !== 'https') {
-        return res.redirect('https://' + req.get('host') + req.url);
-    }
-    next();
-}
-
+//Install express server
 const express = require('express');
+const path = require('path');
+
 const app = express();
 
-app.use(requireHTTPS);
-app.use(express.static('./dist/gestao-municipal-angular'));
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/gestao-municipal-angular'));
 
-app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/angular-heroku/'}),
-);
+app.get('/*', function(req,res) {
+    
+res.sendFile(path.join(__dirname+'/dist/gestao-municipal-angular/index.html'));
+});
 
-var server_port = process.env.YOUR_PORT || process.env.PORT || 3000;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
-
-app.listen(server_port || server_host);
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
