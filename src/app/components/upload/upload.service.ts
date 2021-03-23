@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UploadService {
 
-  private baseUrl = 'https://tcc-gateway.herokuapp.com/api/monitoramento/imagem';
+  private baseUrl = 'https://tcc-monitoramento.herokuapp.com/monitoramento/imagem';
 
   constructor(private http: HttpClient) { }
 

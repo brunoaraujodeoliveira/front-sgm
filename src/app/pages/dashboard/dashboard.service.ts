@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class DashboardService {
 
-  private baseUrl = 'https://tcc-gateway.herokuapp.com/api/integracao/dashboard';
+  private baseUrl = 'https://tcc-integracao.herokuapp.com/integracao/dashboard';
 
   constructor(private http: HttpClient) { }
 
